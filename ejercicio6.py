@@ -24,4 +24,4 @@ N370z.Cilindrada = 3.7
 
 
 print(
-    f"El Nissan 370z viene en color {N370z.color}, tiene {N370z.ruedas} ruedas y {N370z.puertas}. Alcanza una velocidad máxima de {N370z.Velocidad} km/h con una cilindrada de {N370z.Cilindrada} CC")
+    f"El Nissan 370z viene en color {N370z.color}, tiene {N370z.ruedas} ruedas y {N370z.puertas} puertas. Alcanza una velocidad máxima de {N370z.Velocidad} km/h con una cilindrada de {N370z.Cilindrada} CC")
