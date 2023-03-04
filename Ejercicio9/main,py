@@ -1,0 +1,21 @@
+from time import localtime
+
+lt = localtime()
+
+
+def calc_missing():
+
+    hours = 18 - lt.tm_hour
+    minutes = 59 - lt.tm_min
+    secs = 59 - lt.tm_sec
+
+    return hours + ":" + minutes + ":" + secs
+
+
+print(f"{lt.tm_hour}:{lt.tm_min}:{lt.tm_sec}")
+
+if lt.tm_hour >= 19 and lt.tm_sec > 0:
+    print(
+        f"¡Es hora de ir a casa, mañana {lt.tm_mday + 1}/{lt.tm_mon}/{lt.tm_year} será un día genial!")
+else:
+    print("Tiempo restante para descansar", calc_missing())
