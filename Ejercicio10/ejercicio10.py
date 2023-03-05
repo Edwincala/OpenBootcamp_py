@@ -1,4 +1,4 @@
-with open('./archivo.txt', 'w') as f:
+with open('archivo.txt', 'w') as f:
     texto = 'Info escrita al archivo por primera vez'
     f.write(texto)
 
