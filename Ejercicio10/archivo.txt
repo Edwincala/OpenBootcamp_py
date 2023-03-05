@@ -1,0 +1,2 @@
+Info escrita al archivo por primera vez
+Info que puse después
