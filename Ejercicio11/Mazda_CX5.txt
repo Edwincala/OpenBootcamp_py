@@ -1,0 +1,6 @@
+Marca: Mazda 
+Ventanas: 5 
+Ruedas: 4 
+Color: Rojo 
+Velocidad: 192 km/h 
+Cilindrada: 2500 CCs
