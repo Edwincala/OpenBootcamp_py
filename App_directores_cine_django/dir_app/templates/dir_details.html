@@ -1,0 +1,52 @@
+{% extends "base.html" %}
+
+{% block title %}Detalles{% endblock %}
+
+{% block content %}
+
+<h1 class="text-center lh-lg">{{ director.first_name }} {{ director.last_name }}</h1>
+
+<div class="container">
+    <figure>
+        <img class="rounded mx-auto d-block" style="height: 25rem;" src={{director.photo_url}} alt="Foto director">
+        <figcaption class="text-center">Foto {{ director.first_name }} {{ director.last_name }}</figcaption>
+    </figure>
+</div>
+
+<div class="container-lg">
+    <p class="display-6"><strong>Fecha de nacimiento:</strong> {{ director.date_of_birth }}</p>
+    {% if director.date_of_death %}
+    <p class="display-6"><strong>Fecha de fallecimiento:</strong> {{ director.date_of_death }}</p>
+    {% endif %}
+    <p class="display-6"><strong>País de origen:</strong> {{ director.country_of_origin }}</p>  
+</div>
+<hr style="width: 80%; margin-left: 10%;"/>
+<div class="container-lg">
+    <h2 class="lh-lg">Películas producidas</h2>
+    {% if peliculas_de_director %}
+        <div class="g-4">
+            {% for pelicula in peliculas_de_director %}
+                    <div class="card mb-3" style="height: 18rem;">
+                        <div class="row g-0">
+                            <div class="col-md-2">
+                                <img src={{pelicula.poster_url}} class="img-fluid rounded-start" alt="Poster película" style="height: 18rem;">
+                            </div>
+                            <div class="col-md-8">
+                                <div class="card-body">
+                                    <h5 class="card-title lh-lg">{{pelicula.title}}</h5>
+                                    <p class="lh-sm"><strong>Estreno: </strong>{{pelicula.date_of_release}}</p>
+                                    <p class="lh-sm"><strong>Costo: </strong>{{pelicula.budget}}</p>
+                                    <p class="lh-sm"><strong>Duración: </strong>{{pelicula.duration}}</p>
+                                    <p class="lh-sm"><strong>Reparto: </strong>{{pelicula.starring}}</p>
+                                    <p class="lh-sm"><strong>Sinópsis: </strong>{{pelicula.summary}}</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+            {% endfor %}
+        </div>
+    {% else %}
+    <p>Este director no tiene películas registradas</p>
+    {% endif %}
+</div>
+{% endblock %}

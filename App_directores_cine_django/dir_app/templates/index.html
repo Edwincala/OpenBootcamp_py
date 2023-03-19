@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+
+{% block title %}Inicio{% endblock %}
+
+{% block content %}
+<h1 class="text-center lh-lg">Hola, bienvenidos al mundo del cine</h1>
+<div class="container vh-50 mb-3">
+    <div class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="https://img.freepik.com/free-vector/cinema-film-production-realistic-transparent-composition-with-isolated-image-clapper-with-empty-fields-vector-illustration_1284-66163.jpg?w=2000" class="d-block w-100" alt="Movie clapper">
+          </div>
+          <div class="carousel-item">
+            <img src="https://ichef.bbci.co.uk/childrens-responsive-ichef-live/r/720/1x/cbbc/bp-film-review-index.jpg" class="d-block w-100" alt="Clapper, pop corn and tickets">
+          </div>
+          <div class="carousel-item">
+            <img src="https://www.avanzaentucarrera.com/orientacion/comp/uploads/2017/11/ThinkstockPhotos-479391830-724x449.jpg" class="d-block w-100" alt="Movie actor">
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+</div>
+
+
+<div class="container-fluid">
+    <p class="lead">Si te interesa el mundo del cine, esta página es para tí. Aquí podrás encontrar información de tus directores de cine favoritos, y sus obras. Nuevamente, bienvenido, y que empiece la función. <a class="btn btn-primary" href="/directores">Ir a ver</a></p>
+</div>
+
+{% endblock %}

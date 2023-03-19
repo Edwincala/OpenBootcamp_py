@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+
+{% block title %}Directores{% endblock %}
+
+{% block content %}
+<h1 class="text-center lh-lg">Directores</h1>
+<div class="container-xl">
+    
+    {% if directores_list %}
+        <div class="row row-cols-1 row-cols-md-3 g-4">
+            {% for director in directores_list %}
+                <div class="col">
+                    <div class="card h-100" style="width: 18rem;">
+                        <img src={{director.photo_url}} alt="Foto director">
+                        <h5 class="card-title text-center">{{ director.first_name }} {{ director.last_name }}</h5>
+                        <a href="{{ director.id }}" class="btn btn-primary">Ver detalles</a>
+                    </div>
+                </div>             
+            {% endfor %}
+        </div>
+    {% else %}
+        <p>Todavía no hay directores en la base de datos...</p>
+    {% endif %}
+</div>
+{% endblock %}
